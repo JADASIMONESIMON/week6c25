@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="27.0" maxHeight="525.0" maxWidth="765.0" minHeight="391.0" prefHeight="525.0" prefWidth="743.0" style="-fx-background-color: orange;">
+         <children>
+            <AnchorPane layoutX="134.0" layoutY="28.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="493.0" prefWidth="493.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="firstname" prefWidth="75.0" text="First Nsme" />
+                        <TableColumn fx:id="lastname" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="depatment" prefWidth="75.0" text="Department" />
+                        <TableColumn fx:id="major" prefWidth="75.0" text="Major" />
+                        <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="630.0" layoutY="25.0">
+               <children>
+                  <VBox prefHeight="499.0" prefWidth="132.0" spacing="10.0" style="-fx-background-color: #90EE90;">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TextField fx:id="in_id" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="fname" promptText="FIRST NAME">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="lname" promptText="LAST NAME">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="dpart" promptText="DEPARTMENT">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="mjor" promptText="MAJOR">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="address" promptText="EMAIL">
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox focusTraversable="true" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="clear" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: orange;" text="Clear">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="add" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: orange;" text="Add">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="delete" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: orange;" text="Delete">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="exit" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: orange;" text="Exit">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bababa" height="18.0" layoutX="-27.0" layoutY="505.0" stroke="BLACK" strokeType="INSIDE" width="789.0" AnchorPane.topAnchor="510.0" />
+            <AnchorPane AnchorPane.bottomAnchor="498.3333333333333" AnchorPane.topAnchor="0.0" />
+            <ImageView fitHeight="105.0" fitWidth="132.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon.jpg" />
+               </image>
+            </ImageView>
+            <MenuBar fx:id="menu" layoutX="14.0" layoutY="1.0" prefHeight="25.0" prefWidth="762.0" style="-fx-background-color: brown;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Theme">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Theme" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
